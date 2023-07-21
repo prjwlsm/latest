@@ -1,0 +1,1 @@
+export 'package:thatch_mobile_application/presentation/home/home.screen.dart';

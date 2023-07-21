@@ -1,0 +1,1 @@
+export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
