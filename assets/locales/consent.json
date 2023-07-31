@@ -1,0 +1,9 @@
+{
+    "files": [
+        "lib/main.dart",
+        "lib/utils.dart"
+    ],
+    "exclude": [
+        "lib/other.dart"
+    ]
+}
