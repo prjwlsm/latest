@@ -9,7 +9,7 @@ import 'routes.dart';
 
 class EnvironmentsBadge extends StatelessWidget {
   final Widget child;
-  EnvironmentsBadge({required this.child});
+  const EnvironmentsBadge({super.key, required this.child});
   @override
   Widget build(BuildContext context) {
     var env = ConfigEnvironments.getEnvironments()['env'];
@@ -30,6 +30,49 @@ class Nav {
       name: Routes.HOME,
       page: () => const HomeScreen(),
       binding: HomeControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: Routes.STARTER,
+      page: () => const StarterScreen(),
+      binding: StarterControllerBinding(),
+      transition: Transition.downToUp,
+    ),
+    GetPage(
+      name: Routes.LOGIN,
+      page: () => const LoginScreen(),
+      binding: LoginControllerBinding(),
+      transition: Transition.downToUp,
+      transitionDuration: const Duration(seconds: 2),
+    ),
+    GetPage(
+      name: Routes.REGISTRATION,
+      page: () => RegistrationScreen(),
+      binding: RegistrationControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 2),
+    ),
+    GetPage(
+      name: Routes.OTO_VERIFICATION,
+      page: () => const OtoVerificationScreen(),
+      binding: OtoVerificationControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: Routes.LOI,
+      page: () => const LoiScreen(),
+      binding: LoiControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: Routes.INVENTORY_CHECKLIST,
+      page: () => const InventoryChecklistScreen(),
+      binding: InventoryChecklistControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
     ),
   ];
 }

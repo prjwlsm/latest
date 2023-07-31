@@ -8,6 +8,10 @@ environment:
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
+  sizer: ^2.0.15
+  flutter_svg: ^2.0.7
+  flutter_switch: ^0.3.2
+  toggle_switch: ^2.1.0
   flutter: 
     sdk: flutter
 
@@ -17,5 +21,12 @@ dev_dependencies:
     sdk: flutter
 
 flutter: 
+  assets: 
+    - assets/images/png/
+    - assets/images/svg/
+  fonts: 
+    - family: Candara
+      fonts: 
+        - asset: fonts/Candara-Font.ttf
   uses-material-design: true
 
