@@ -3,12 +3,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/text_constants.dart';
 
 import '../../../infrastructure/theme/app_colors.dart';
 import '../../../infrastructure/theme/app_text_theme.dart';
 
 class UploadFilesView extends GetView {
-  const UploadFilesView({Key? key,this.onPressed}) : super(key: key);
+  const UploadFilesView({Key? key,this.onPressed, required this.text}) : super(key: key);
+  final String text;
   final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -22,14 +24,14 @@ class UploadFilesView extends GetView {
       ),
       child: Padding(
         padding: EdgeInsets.only(
-            right: 2.82.w, top: 1.3.h, bottom: 2.61.h),
+            right: 2.82.w, top: 5.38.w, bottom: 5.38.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(left: 6.92.w),
               child: Text(
-                'First month rent payment details',
+                text,
                 style: AppTextThemes.headline4.copyWith(
                     fontWeight: FontWeight.w700),
               ),
@@ -67,7 +69,7 @@ class UploadFilesView extends GetView {
                       SizedBox(
                         width: 1.28.w,
                       ),
-                      const Text('Upload Files'),
+                      Text(TextConstants.uploadFiles),
                     ],
                   ),
                 ),

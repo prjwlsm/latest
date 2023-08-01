@@ -3,14 +3,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/text_constants.dart';
 
 import '../../../infrastructure/theme/app_colors.dart';
 import '../../../infrastructure/theme/app_text_theme.dart';
 import 'custom_button_view.dart';
 
 class SignDocumentView extends GetView {
-  const SignDocumentView({Key? key,this.onPressed}) : super(key: key);
+  const SignDocumentView({Key? key,this.onPressed,required this.hedgingText, required this.fileName}) : super(key: key);
   final Function()? onPressed;
+  final String hedgingText;
+  final String fileName;
   Widget build(BuildContext context) {
     return Container(
       width: 84.36.w,
@@ -27,7 +30,7 @@ class SignDocumentView extends GetView {
           Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: 5.38.w, vertical: 3.59.w),
-            child: Text('Sign the LOI Document',
+            child: Text(hedgingText,
                 style: AppTextThemes.headline3.copyWith(
                     fontWeight: FontWeight.w700,
                     color: Colors.black)),
@@ -44,7 +47,7 @@ class SignDocumentView extends GetView {
               crossAxisAlignment:
               CrossAxisAlignment.start,
               children: [
-                Text('Document',
+                Text(TextConstants.document,
                     style: AppTextThemes.headline4
                         .copyWith(
                         color:
@@ -76,7 +79,7 @@ class SignDocumentView extends GetView {
                       ),
                       Expanded(
                         child: Text(
-                          'Contract12345678.pdf',
+                          fileName,
                           style: AppTextThemes.headline5
                               .copyWith(
                               fontWeight:
@@ -95,6 +98,8 @@ class SignDocumentView extends GetView {
                   height: 5.92.h,
                   child: CustomButtonView(
                       text: 'Sign',
+                      icon: 'assets/images/svg/icon _edit.svg',
+                      iconSize: 3.57.w,
                       fontSize: 9.33.sp,
                       onPressed: onPressed),
                 ),

@@ -5,3 +5,4 @@ export 'package:thatch_mobile_application/presentation/login/login.screen.dart';
 export 'package:thatch_mobile_application/presentation/oto_verification/oto_verification.screen.dart';
 export 'package:thatch_mobile_application/presentation/registration/registration.screen.dart';
 export 'package:thatch_mobile_application/presentation/starter/starter.screen.dart';
+export 'package:thatch_mobile_application/presentation/view_checklist_confirm_loi/view_checklist_confirm_loi.screen.dart';

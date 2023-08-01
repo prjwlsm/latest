@@ -3,9 +3,25 @@ import 'package:get/get.dart';
 class InventoryChecklistController extends GetxController {
   //TODO: Implement InventoryChecklistController
 
-  final count = 0.obs;
+  final List<Map<String, dynamic>> items = List.generate(
+      5,
+          (index) => {
+        "id": index,
+        "title": "Bedroom $index",
+        "content": [
+          'Wardrobe',
+          'Air-conditioner',
+          'Fan',
+          'Light',
+          'Bed',
+          'Mattress',
+          'Curtains',
+          'Side Tables'
+        ]
+      });
   @override
   void onInit() {
+
     super.onInit();
   }
 
@@ -19,5 +35,4 @@ class InventoryChecklistController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
 }
