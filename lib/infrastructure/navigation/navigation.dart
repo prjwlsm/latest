@@ -69,7 +69,7 @@ class Nav {
     ),
     GetPage(
       name: Routes.INVENTORY_CHECKLIST,
-      page: () => const InventoryChecklistScreen(),
+      page: () =>  InventoryChecklistScreen(),
       binding: InventoryChecklistControllerBinding(),
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 1),

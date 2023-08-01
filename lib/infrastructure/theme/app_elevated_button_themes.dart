@@ -5,7 +5,7 @@ import 'app_colors.dart';
 
 class AppElevatedButtonThemes {
   static ElevatedButtonThemeData light =  ElevatedButtonThemeData(style: ElevatedButton.styleFrom(
-      fixedSize:  Size( 80.w, 67),
+      fixedSize:  Size( 80.w, 17.44.w),
       backgroundColor: AppColors.primaryColor,
       disabledForegroundColor: Colors.white,
       shape: const RoundedRectangleBorder(

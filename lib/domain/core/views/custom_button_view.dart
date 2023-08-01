@@ -18,6 +18,7 @@ class CustomButtonView extends GetView {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+
       onPressed: onPressed == null ? null : () {
         onPressed!();
       },

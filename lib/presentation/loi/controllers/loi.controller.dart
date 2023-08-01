@@ -6,12 +6,13 @@ class LoiController extends GetxController {
   dynamic argumentData = Get.arguments;
   @override
   void onInit() {
-    isNewUserRegistration.value = argumentData['isNewUserRegistration'];
+
     super.onInit();
   }
 
   @override
   void onReady() {
+    isNewUserRegistration.value = argumentData['isNewUserRegistration'];
     super.onReady();
 
   }

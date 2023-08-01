@@ -87,7 +87,7 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                             CustomButtonView(
                               text: 'Register',
                               onPressed: () {
-                                Get.offAllNamed(Routes.LOI,arguments: {"isNewUserRegistration" : true});
+                                Get.offAllNamed(Routes.LOI,arguments: {"isNewUserRegistration" : false});
                               },
                             ),
                             SizedBox(
