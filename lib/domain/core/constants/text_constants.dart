@@ -11,4 +11,7 @@ class TextConstants {
   static String uploadFiles = 'Upload Files';
   static String firstMonthRentPaymentDetails = 'First month rent payment details';
   static String fullDepositPaymentDetails = 'Full deposit payment details';
+  static String congratulations = 'Congratulations!';
+  static String yauHaveSuccessfullyCompletedTheContractProcess = 'Yau have successfully completed the contract process.';
+  static String completeContract = 'Complete Contract';
 }

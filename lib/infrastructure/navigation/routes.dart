@@ -12,4 +12,5 @@ class Routes {
   static const REGISTRATION = '/registration';
   static const STARTER = '/starter';
   static const VIEW_CHECKLIST_CONFIRM_LOI = '/view-checklist-confirm-loi';
+  static const COMPLETE_CONTRACT_TENANT = '/complete-contract-tenant';
 }

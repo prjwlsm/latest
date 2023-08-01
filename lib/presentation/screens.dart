@@ -1,4 +1,5 @@
 export 'package:thatch_mobile_application/presentation/LOI/loi.screen.dart';
+export 'package:thatch_mobile_application/presentation/complete_contract_tenant/complete_contract_tenant.screen.dart';
 export 'package:thatch_mobile_application/presentation/home/home.screen.dart';
 export 'package:thatch_mobile_application/presentation/inventory_checklist/inventory_checklist.screen.dart';
 export 'package:thatch_mobile_application/presentation/login/login.screen.dart';

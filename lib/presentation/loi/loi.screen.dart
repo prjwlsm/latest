@@ -151,9 +151,12 @@ class LoiScreen extends GetView<LoiController> {
               SizedBox(
                 height: 2.61.h,
               ),
-              const TermsofServiceView(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.64.w),
+                child: const TermsofServiceView(),
+              ),
               SizedBox(
-                height: 2.61.h,
+                height: 1.h,
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/complete_contract_tenant.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/inventory_checklist.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
