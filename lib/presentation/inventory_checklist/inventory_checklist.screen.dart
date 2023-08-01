@@ -6,6 +6,7 @@ import 'package:sizer/sizer.dart';
 import 'package:thatch_mobile_application/domain/core/constants/text_constants.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_themes.dart';
 
+import '../../domain/core/views/app_bar_view.dart';
 import '../../domain/core/views/custom_button_view.dart';
 import '../../infrastructure/navigation/routes.dart';
 import '../../infrastructure/theme/app_colors.dart';
@@ -15,51 +16,13 @@ import 'controllers/inventory_checklist.controller.dart';
 class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
   InventoryChecklistScreen({Key? key}) : super(key: key);
 
-  final List<Map<String, dynamic>> _items = List.generate(
-      5,
-      (index) => {
-            "id": index,
-            "title": "Bedroom $index",
-            "content": [
-              'Wardrobe',
-              'Air-conditioner',
-              'Fan',
-              'Light',
-              'Bed',
-              'Mattress',
-              'Curtains',
-              'Side Tables'
-            ]
-          });
 
-  void _removeItem(int id) {
-    // setState(() {
-    _items.removeWhere((element) => element['id'] == id);
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bodyColor,
-      appBar: AppBar(
-        toolbarHeight: 8.53.h,
-        title: Text(TextConstants.inventoryChecklist,
-            style:
-                AppTextThemes.headline2.copyWith(fontWeight: FontWeight.w700)),
-        leadingWidth: 17.w,
-        leading: Padding(
-          padding: EdgeInsets.only(left: 7.44.w),
-          child: SizedBox(
-            height: 10,
-            child: SvgPicture.asset(
-              'assets/images/svg/icon_back.svg',
-              width: 20,
-              height: 10,
-            ),
-          ),
-        ),
-        // elevation: 5,
-      ),
+      appBar: customAppbar(title: TextConstants.inventoryChecklist,isLeading: true),
       body: ListView.separated(
         shrinkWrap: true,
         itemCount: 2,
@@ -73,7 +36,7 @@ class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
                     children: [
                       Expanded(
                         child: CustomButtonView(
-                          text: 'Confirm',
+                          text: TextConstants.confirm,
                           onPressed: () {
                             Get.offAllNamed(Routes.LOI,arguments: {"isNewUserRegistration" : true});
                           },
@@ -101,10 +64,10 @@ class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
                   clipBehavior: Clip.antiAlias,
                   child: ListView.separated(
                     shrinkWrap: true,
-                    itemCount: _items.length,
+                    itemCount: controller.items.length,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (_, index) {
-                      final item = _items[index];
+                      final item = controller.items[index];
                       return Theme(
                         data: ThemeData(
                           dividerColor: Colors.transparent,

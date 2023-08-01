@@ -6,6 +6,8 @@ import 'package:sizer/sizer.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_colors.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_text_theme.dart';
 
+import '../../domain/core/constants/text_constants.dart';
+import '../../domain/core/views/app_bar_view.dart';
 import '../../domain/core/views/custom_button_view.dart';
 import '../../domain/core/views/sign_document_view.dart';
 import '../../domain/core/views/termsof_service_view.dart';
@@ -21,17 +23,7 @@ class LoiScreen extends GetView<LoiController> {
     return Scaffold(
       backgroundColor: AppColors.bodyColor,
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        toolbarHeight: 75,
-        title: Padding(
-          padding: const EdgeInsets.all(13.0),
-          child: Text(
-            'LOI ',
-            style:
-                AppTextThemes.headline2.copyWith(fontWeight: FontWeight.w700),
-          ),
-        ),
-      ),
+      appBar: customAppbar(title: TextConstants.loi),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -119,10 +111,12 @@ class LoiScreen extends GetView<LoiController> {
                         return Opacity(
                           opacity:
                               controller.isNewUserRegistration.value ? 1 : 0.5,
-                          child: SignDocumentView(onPressed: controller
-                              .isNewUserRegistration.value
-                              ? () {}
-                              : null),
+                          child: SignDocumentView(
+                            hedgingText: TextConstants.signTheLOIDocument,
+                              fileName: 'Contract12345678.pdf',
+                              onPressed: controller.isNewUserRegistration.value
+                                  ? () {}
+                                  : null),
                         );
                       }),
                       SizedBox(
@@ -132,10 +126,11 @@ class LoiScreen extends GetView<LoiController> {
                         return Opacity(
                           opacity:
                               controller.isNewUserRegistration.value ? 1 : 0.5,
-                          child: UploadFilesView(onPressed: controller
-                              .isNewUserRegistration.value
-                              ? () {}
-                              : null),
+                          child: UploadFilesView(
+                            text: TextConstants.firstMonthRentPaymentDetails,
+                              onPressed: controller.isNewUserRegistration.value
+                                  ? () {}
+                                  : null),
                         );
                       }),
                     ],
@@ -143,13 +138,16 @@ class LoiScreen extends GetView<LoiController> {
                 ),
               ),
               Obx(() {
-                  return CustomButtonView(
-                    text: 'Comfirms',
-                    onPressed:
-                        controller.isNewUserRegistration.value ? () {} : null,
-                  );
-                }
-              ),
+                return CustomButtonView(
+                  text: TextConstants.confirm,
+                  icon: 'assets/images/svg/icon_check.svg',
+                  onPressed: controller.isNewUserRegistration.value
+                      ? () {
+                          Get.offAllNamed(Routes.VIEW_CHECKLIST_CONFIRM_LOI);
+                        }
+                      : null,
+                );
+              }),
               SizedBox(
                 height: 2.61.h,
               ),

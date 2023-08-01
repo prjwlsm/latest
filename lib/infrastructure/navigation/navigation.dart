@@ -69,8 +69,15 @@ class Nav {
     ),
     GetPage(
       name: Routes.INVENTORY_CHECKLIST,
-      page: () =>  InventoryChecklistScreen(),
+      page: () => InventoryChecklistScreen(),
       binding: InventoryChecklistControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
+    ),
+    GetPage(
+      name: Routes.VIEW_CHECKLIST_CONFIRM_LOI,
+      page: () => const ViewChecklistConfirmLoiScreen(),
+      binding: ViewChecklistConfirmLoiControllerBinding(),
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 1),
     ),
