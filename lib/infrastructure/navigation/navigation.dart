@@ -81,5 +81,12 @@ class Nav {
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 1),
     ),
+    GetPage(
+      name: Routes.COMPLETE_CONTRACT_TENANT,
+      page: () => const CompleteContractTenantScreen(),
+      binding: CompleteContractTenantControllerBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(seconds: 1),
+    ),
   ];
 }

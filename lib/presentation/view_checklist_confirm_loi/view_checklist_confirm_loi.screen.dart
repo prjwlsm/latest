@@ -54,7 +54,9 @@ class ViewChecklistConfirmLoiScreen
               ),
               CustomButtonView(
                 text: TextConstants.confirm,
-                onPressed: () {},
+                onPressed: () {
+                  Get.offAllNamed(Routes.COMPLETE_CONTRACT_TENANT);
+                },
               ),
               SizedBox(
                 height: 2.61.h,
