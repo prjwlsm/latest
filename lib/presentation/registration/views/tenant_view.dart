@@ -43,6 +43,7 @@ class TenantView extends GetView {
                       child: CustomButtonView(
                         text: TextConstants.registerWithSingpass,
                         fontSize: 10.67.sp,
+                        letterSpacing: 0,
                         onPressed: () {},
                       ),
                     ),
@@ -56,12 +57,12 @@ class TenantView extends GetView {
           ),
         ),
 
-        const SizedBox(height: 5),
+        SizedBox(height: 2.01.h),
         Padding(
           padding: const EdgeInsets.only(left: 14),
           child: Text('Passport Number',
-              style: AppTextThemes.headline4
-                  .copyWith(fontWeight: FontWeight.w700)),
+              style: AppTextThemes.headline5
+                  .copyWith(fontWeight: FontWeight.w700,)),
         ),
         const SizedBox(height: 4),
         const CustomTextFormField(

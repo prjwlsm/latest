@@ -9,9 +9,10 @@ import '../../../infrastructure/theme/app_colors.dart';
 import '../../../infrastructure/theme/app_text_theme.dart';
 
 class UploadFilesView extends GetView {
-  const UploadFilesView({Key? key,this.onPressed, required this.text}) : super(key: key);
+  const UploadFilesView({Key? key,this.onPressed, required this.text,required this.textStyle}) : super(key: key);
   final String text;
   final Function()? onPressed;
+  final TextStyle textStyle;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +33,7 @@ class UploadFilesView extends GetView {
               padding: EdgeInsets.only(left: 6.92.w),
               child: Text(
                 text,
-                style: AppTextThemes.headline4.copyWith(
+                style: textStyle.copyWith(
                     fontWeight: FontWeight.w700),
               ),
             ),

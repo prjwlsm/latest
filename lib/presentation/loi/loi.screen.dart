@@ -85,8 +85,9 @@ class LoiScreen extends GetView<LoiController> {
                                     Text('Tenant Preferences',
                                         style: AppTextThemes.headline4.copyWith(
                                             fontWeight: FontWeight.w700,
+                                            letterSpacing: 0,
                                             color: Colors.black)),
-                                    Text('Tenant Preferences',
+                                    Text('Tenant checklist requests',
                                         style: AppTextThemes.headline6.copyWith(
                                             color: AppColors.bodyColor[70]))
                                   ],
@@ -127,6 +128,7 @@ class LoiScreen extends GetView<LoiController> {
                           opacity:
                               controller.isNewUserRegistration.value ? 1 : 0.5,
                           child: UploadFilesView(
+                            textStyle: AppTextThemes.headline4,
                             text: TextConstants.firstMonthRentPaymentDetails,
                               onPressed: controller.isNewUserRegistration.value
                                   ? () {}
@@ -140,7 +142,6 @@ class LoiScreen extends GetView<LoiController> {
               Obx(() {
                 return CustomButtonView(
                   text: TextConstants.confirm,
-                  icon: 'assets/images/svg/icon_check.svg',
                   onPressed: controller.isNewUserRegistration.value
                       ? () {
                           Get.offAllNamed(Routes.VIEW_CHECKLIST_CONFIRM_LOI);

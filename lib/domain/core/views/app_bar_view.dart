@@ -15,7 +15,7 @@ PreferredSizeWidget customAppbar({required String title,bool isLeading = false})
         title,
         maxLines: 3,
         style:
-        AppTextThemes.headline2.copyWith(fontWeight: FontWeight.w700,overflow: TextOverflow.ellipsis),
+        AppTextThemes.headline2.copyWith(fontWeight: FontWeight.w700,overflow: TextOverflow.ellipsis,),
       ),
     ),
     leadingWidth: 17.w,

@@ -60,7 +60,7 @@ class LoginScreen extends GetView<LoginController> {
                                 const SizedBox(height: 4),
                                 CustomTextFormField(
                                   prefixIcon: IconsThemes.prefixSVGIconThemes('assets/images/svg/icon_profile.svg'),
-                                  hintText: 'Password',
+                                  hintText: 'Email',
                                 ),
                                 const SizedBox(height: 10,),
                                 Padding(
@@ -108,11 +108,11 @@ class LoginScreen extends GetView<LoginController> {
                                       children: [
                                         TextSpan(
                                           text: 'Don’t have an account? ',
-                                          style: AppTextThemes.headline4,
+                                          style: AppTextThemes.headline4.copyWith(letterSpacing: 0),
                                         ),
                                         TextSpan(
                                           text: 'Register',
-                                          style: AppTextThemes.headline4.copyWith(fontWeight: FontWeight.w700),
+                                          style: AppTextThemes.headline4.copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
                                           recognizer: TapGestureRecognizer()
                                           ..onTap = () {
                                             Get.toNamed(Routes.REGISTRATION);
@@ -152,11 +152,11 @@ class LoginScreen extends GetView<LoginController> {
                                           children: [
                                             TextSpan(
                                               text: 'Tap to login with ',
-                                              style: AppTextThemes.headline4,
+                                              style: AppTextThemes.headline4.copyWith(letterSpacing: -0.81),
                                             ),
                                             TextSpan(
                                               text: 'Biometric',
-                                              style: AppTextThemes.headline4.copyWith(fontWeight: FontWeight.w700),
+                                              style: AppTextThemes.headline4.copyWith(fontWeight: FontWeight.w700,letterSpacing: -0.81),
                                             ),
                                           ],
                                         ),
@@ -174,9 +174,9 @@ class LoginScreen extends GetView<LoginController> {
                     ],
                   ),
                 ),
-                const Positioned(
+                 Positioned(
                   // top: 25,
-                  bottom: 5,
+                  bottom: 1.66.h,
                   left: 30,
                   right: 30,
                   child: TermsofServiceView(),

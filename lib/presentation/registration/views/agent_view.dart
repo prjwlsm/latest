@@ -16,7 +16,7 @@ class AgentView extends GetView {
       Padding(
         padding: const EdgeInsets.only(left: 14),
         child: Text('CEA Registration Number',
-            style: AppTextThemes.headline4
+            style: AppTextThemes.headline5
                 .copyWith(fontWeight: FontWeight.w700)),
       ),
       const SizedBox(height: 4),

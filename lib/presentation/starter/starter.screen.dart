@@ -93,11 +93,11 @@ class StarterScreen extends GetView<StarterController> {
                       children: [
                         TextSpan(
                           text: 'Don’t have an account? ',
-                          style: AppTextThemes.headline4.copyWith(color: Colors.white),
+                          style: AppTextThemes.headline4.copyWith(color: Colors.white,letterSpacing: 0),
                         ),
                         TextSpan(
                           text: 'Register',
-                          style: AppTextThemes.headline4.copyWith(color: AppColors.yellowColor,fontWeight: FontWeight.w700),
+                          style: AppTextThemes.headline4.copyWith(color: AppColors.yellowColor,fontWeight: FontWeight.w700,letterSpacing: 0),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 Get.toNamed(Routes.REGISTRATION);
