@@ -14,6 +14,7 @@ dependencies:
   toggle_switch: ^2.1.0
   flutter: 
     sdk: flutter
+  dropdown_button2: ^2.3.7
 
 dev_dependencies: 
   flutter_lints: ^2.0.0

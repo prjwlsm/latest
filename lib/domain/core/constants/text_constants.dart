@@ -14,4 +14,15 @@ class TextConstants {
   static String congratulations = 'Congratulations!';
   static String yauHaveSuccessfullyCompletedTheContractProcess = 'Yau have successfully completed the contract process.';
   static String completeContract = 'Complete Contract';
+  static String close = 'Close';
+  static String sendRequest = 'Send Request';
+  static String enterYourRequest = 'Enter your request';
+  static String selectRequestType = 'Select request type';
+
+  static List<dynamic> requestTypes = [
+    'Repair',
+    'Replace',
+    'Other'
+  ];
+
 }

@@ -1,10 +1,11 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/assets_constants.dart';
 import 'package:thatch_mobile_application/domain/core/constants/text_constants.dart';
-import 'package:thatch_mobile_application/infrastructure/theme/app_themes.dart';
 
 import '../../domain/core/views/app_bar_view.dart';
 import '../../domain/core/views/custom_button_view.dart';
@@ -12,33 +13,39 @@ import '../../infrastructure/navigation/routes.dart';
 import '../../infrastructure/theme/app_colors.dart';
 import '../../infrastructure/theme/app_text_theme.dart';
 import 'controllers/inventory_checklist.controller.dart';
+import 'views/request_dialog_view.dart';
 
 class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
-  InventoryChecklistScreen({Key? key}) : super(key: key);
+  const InventoryChecklistScreen({Key? key}) : super(key: key);
 
 
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       backgroundColor: AppColors.bodyColor,
-      appBar: customAppbar(title: TextConstants.inventoryChecklist,isLeading: true),
+      appBar: customAppbar(title: TextConstants.inventoryChecklist,isLeading: true,),
       body: ListView.separated(
         shrinkWrap: true,
         itemCount: 2,
         physics: const AlwaysScrollableScrollPhysics(),
         itemBuilder: (_, count) {
-          return count == 1
-              ? Padding(
+          return count == 1 ? Padding(
                   padding:
-                      EdgeInsets.only(left: 3.33.w, right: 4.87.w, top: 3.08.h),
+                      EdgeInsets.only(left: 3.33.w, right: 4.87.w, top: 3.08.h,bottom: 20),
                   child: Row(
                     children: [
                       Expanded(
                         child: CustomButtonView(
                           text: TextConstants.confirm,
+                          icon: AppAssets.iconCheck,
+                          letterSpacing: 0,
+                          fontSize: 12.sp,
                           onPressed: () {
-                            Get.offAllNamed(Routes.LOI,arguments: {"isNewUserRegistration" : true});
+                            Get.offAllNamed(Routes.LOI,arguments: {controller.isNewUserRegistration : true});
                           },
                         ),
                       ),
@@ -72,7 +79,7 @@ class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
                         data: ThemeData(
                           dividerColor: Colors.transparent,
                           unselectedWidgetColor: Colors.black,
-                          colorScheme: ColorScheme.light(
+                          colorScheme: const ColorScheme.light(
                             primary: Colors.black,
                           ),
                         ),
@@ -87,6 +94,7 @@ class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
                               item['title'],
                               style: AppTextThemes.headline3.copyWith(
                                   fontWeight: FontWeight.w700,
+                                  letterSpacing: -0.20,
                                   color: Colors.black),
                             ),
                             children: [
@@ -99,9 +107,16 @@ class InventoryChecklistScreen extends GetView<InventoryChecklistController> {
                                   itemCount: item["content"].length,
                                   itemBuilder:
                                       (BuildContext context, int index1) {
-                                    return ListTile(
-                                        title: Text(item["content"][index1],
-                                            style: AppTextThemes.headline5));
+                                    return GestureDetector(
+                                      onTap: (){
+                                        Get.dialog(
+                                            RequestDialogView(items: item["content"][index1],)
+                                        );
+                                      },
+                                      child: ListTile(
+                                          title: Text(item["content"][index1]["title"],
+                                              style: AppTextThemes.headline5.copyWith(letterSpacing: 0))),
+                                    );
                                   },
                                   separatorBuilder: (context, index) {
                                     return Container(

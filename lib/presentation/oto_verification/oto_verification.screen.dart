@@ -59,7 +59,7 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                                       'We have sent an OTP on your mobile number +65 9XXX XXXX',
                                       textAlign: TextAlign.center,
                                       style: AppTextThemes.headline5
-                                          .copyWith(color: AppColors.textColor[60])),
+                                          .copyWith(color: AppColors.textColor[60],letterSpacing: 0)),
                                 ],
                               ),
                             ),
@@ -78,9 +78,9 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text('00:58',style: AppTextThemes.headline4
-                                    .copyWith(color: AppColors.textColor[70]),),
+                                    .copyWith(color: AppColors.textColor[70],letterSpacing: 0),),
                                 Text('Resend OTP?',style: AppTextThemes.headline4
-                                    .copyWith(color: AppColors.textColor[70]))
+                                    .copyWith(color: AppColors.textColor[70],letterSpacing: 0))
                               ],
                             ),
                             SizedBox(height: 4.98.h),
@@ -99,12 +99,12 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                                   children: [
                                     TextSpan(
                                       text: 'Already have account? ',
-                                      style: AppTextThemes.headline4,
+                                      style: AppTextThemes.headline4.copyWith(letterSpacing: 0),
                                     ),
                                     TextSpan(
                                         text: 'Log in',
                                         style: AppTextThemes.headline4
-                                            .copyWith(fontWeight: FontWeight.w700),
+                                            .copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
                                         recognizer: TapGestureRecognizer()
                                           ..onTap = () {
                                             Get.toNamed(Routes.LOGIN);
@@ -120,7 +120,7 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                 ),
               ),
               Padding(
-                padding:  EdgeInsets.symmetric(vertical: 0.94.h, horizontal: 7.44.w),
+                padding:  EdgeInsets.symmetric(vertical: 1.66.h, horizontal: 7.44.w),
                 child: const TermsofServiceView(),
               )
 

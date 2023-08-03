@@ -5,11 +5,12 @@ import 'app_colors.dart';
 
 class AppElevatedButtonThemes {
   static ElevatedButtonThemeData light =  ElevatedButtonThemeData(style: ElevatedButton.styleFrom(
-      fixedSize:  Size( 80.w, 17.44.w),
+      fixedSize:  Size( 80.w, 7.94.h),
       backgroundColor: AppColors.primaryColor,
       disabledForegroundColor: Colors.white,
       shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(12)),
+
     ),
   ));
 

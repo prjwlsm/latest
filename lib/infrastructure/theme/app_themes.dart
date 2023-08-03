@@ -15,9 +15,9 @@ class AppThemes {
     inputDecorationTheme: InputDecorationThemes.light,
     fontFamily: 'Candara',
     appBarTheme: AppBarThemes.light(context),
-    textTheme: AppTextThemes.textThemes(context),
+    textTheme: AppTextThemes.textThemes(context).apply(fontFamily: 'Candara',),
     elevatedButtonTheme: AppElevatedButtonThemes.light,
-    outlinedButtonTheme: AppOutlinedButtonTheme.light,
+    outlinedButtonTheme: AppOutlinedButtonTheme.light(context),
     checkboxTheme: CheckboxThemeData(
       fillColor: MaterialStateProperty.all(AppColors.primaryColor),
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,

@@ -33,6 +33,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
     //   curve: Curves.easeIn,
     // );
     return Sizer(builder: (context, orientation, deviceType) {
+      Get.log(Get.height.toString());
       return Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
@@ -41,7 +42,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
               padding: EdgeInsets.symmetric(vertical: 0.94.h, horizontal: 7.44.w),
               child: Column(
                 children: [
-                  SizedBox(height: 7.23.h),
+                  SizedBox(height: 3.525.h),
                   Center(
                     child: SvgPicture.asset(
                       'assets/images/svg/logo.svg',
@@ -78,7 +79,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         inactiveFgColor: AppColors.toneColor,
                         customTextStyles: [
                           AppTextThemes.headline4
-                              .copyWith(fontWeight: FontWeight.w700),
+                              .copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
                         ],
                         totalSwitches: 2,
                         labels: TextConstants.registersTypes,
@@ -109,18 +110,18 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Name',
-                              style: AppTextThemes.headline4
+                              style: AppTextThemes.headline5
                                   .copyWith(fontWeight: FontWeight.w700)),
                         ),
                         const SizedBox(height: 4),
                         const CustomTextFormField(
                           hintText: 'Name',
                         ),
-                        SizedBox(height: 2.h),
+                        SizedBox(height: 2.01.h),
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Mobile',
-                              style: AppTextThemes.headline4
+                              style: AppTextThemes.headline5
                                   .copyWith(fontWeight: FontWeight.w700)),
                         ),
                         const SizedBox(height: 4),
@@ -139,7 +140,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                                     bottomLeft: Radius.circular(12)),
                               ),
                               child: Center(
-                                  child: Text("+67",
+                                  child: Text("+65",
                                       style: AppTextThemes.headline5.copyWith(
                                           fontWeight: FontWeight.w700))),
                             ),
@@ -155,7 +156,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Email Address',
-                              style: AppTextThemes.headline4
+                              style: AppTextThemes.headline5
                                   .copyWith(fontWeight: FontWeight.w700)),
                         ),
                         const SizedBox(height: 4),
@@ -166,7 +167,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Create New Password',
-                              style: AppTextThemes.headline4
+                              style: AppTextThemes.headline5
                                   .copyWith(fontWeight: FontWeight.w700)),
                         ),
                         const SizedBox(height: 4),
@@ -177,7 +178,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Confirm Password',
-                              style: AppTextThemes.headline4
+                              style: AppTextThemes.headline5
                                   .copyWith(fontWeight: FontWeight.w700)),
                         ),
                         const SizedBox(height: 4),
@@ -202,12 +203,12 @@ class RegistrationScreen extends GetView<RegistrationController> {
                               children: [
                                 TextSpan(
                                   text: 'Already have account? ',
-                                  style: AppTextThemes.headline4,
+                                  style: AppTextThemes.headline4.copyWith(letterSpacing: 0),
                                 ),
                                 TextSpan(
                                     text: 'Log in',
                                     style: AppTextThemes.headline4
-                                        .copyWith(fontWeight: FontWeight.w700),
+                                        .copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
                                         Get.toNamed(Routes.LOGIN);
@@ -221,6 +222,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                           height: 5.33.h,
                         ),
                         const TermsofServiceView(),
+                        SizedBox(height:3.09.h,)
                       ],
                     ),
                   ),

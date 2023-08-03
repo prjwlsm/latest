@@ -26,6 +26,12 @@ class CustomTextFormField extends GetView {
         enabledBorder: border(context),
         prefixIcon: prefixIcon,
         hintText: hintText,
+        hintStyle: Theme.of(context).inputDecorationTheme.hintStyle!.copyWith(
+          letterSpacing: 0
+        ),
+        helperStyle: Theme.of(context).inputDecorationTheme.helperStyle!.copyWith(
+          letterSpacing: 0
+        ),
         helperText: helperText,
       ),
     );

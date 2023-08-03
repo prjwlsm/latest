@@ -33,6 +33,7 @@ class SignDocumentView extends GetView {
             child: Text(hedgingText,
                 style: AppTextThemes.headline3.copyWith(
                     fontWeight: FontWeight.w700,
+
                     color: Colors.black)),
           ),
           const Divider(),
@@ -50,6 +51,7 @@ class SignDocumentView extends GetView {
                 Text(TextConstants.document,
                     style: AppTextThemes.headline4
                         .copyWith(
+                        letterSpacing: -0.45,
                         color:
                         AppColors.bodyColor[70])),
                 SizedBox(
@@ -82,6 +84,7 @@ class SignDocumentView extends GetView {
                           fileName,
                           style: AppTextThemes.headline5
                               .copyWith(
+                              letterSpacing: -0.40,
                               fontWeight:
                               FontWeight.w500,
                               color: Colors.black),
@@ -98,7 +101,7 @@ class SignDocumentView extends GetView {
                   height: 5.92.h,
                   child: CustomButtonView(
                       text: 'Sign',
-                      icon: 'assets/images/svg/icon _edit.svg',
+                      icon: 'assets/images/svg/icon_edit.svg',
                       iconSize: 3.57.w,
                       fontSize: 9.33.sp,
                       onPressed: onPressed),

@@ -45,6 +45,7 @@ class ViewChecklistConfirmLoiScreen
                         height: 2.25.h,
                       ),
                       UploadFilesView(
+                        textStyle: AppTextThemes.headline5,
                         text: TextConstants.fullDepositPaymentDetails,
                           onPressed: () {}
                       )
