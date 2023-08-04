@@ -5,7 +5,6 @@ import 'package:thatch_mobile_application/infrastructure/theme/app_text_theme.da
 class InputDecorationThemes {
   static InputDecorationTheme light =  InputDecorationTheme(
 
-
     border: const OutlineInputBorder(
       borderSide: BorderSide(
         width: 1,

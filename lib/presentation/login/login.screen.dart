@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/assets_constants.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_colors.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_text_theme.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/icons_themes.dart';
@@ -37,7 +38,7 @@ class LoginScreen extends GetView<LoginController> {
                       SizedBox(height: 7.97.h,),
                       Center(
                         child: SvgPicture.asset(
-                          'assets/images/svg/logo.svg',
+                          AppAssets.logo,
                           width: 20.w,
                           height: 20.w,
                         ),

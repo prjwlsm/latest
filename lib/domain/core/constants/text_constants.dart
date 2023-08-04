@@ -24,5 +24,14 @@ class TextConstants {
     'Replace',
     'Other'
   ];
+  static String search = 'Search';
+  static String manage = 'Manage';
+  static String yourPropertiesHere = 'your Properties Here!';
+  static String requests = 'Requests';
+  static String inProgress = 'In Progress';
+  static String rented = 'Rented';
+  static String thereAreNoPropertiesHere = 'There are no properties here!';
+  static String startAddingYourProperties = 'Start adding your properties';
+
 
 }

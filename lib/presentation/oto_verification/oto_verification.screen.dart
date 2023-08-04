@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/assets_constants.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_colors.dart';
 
 import '../../domain/core/views/custom_button_view.dart';
@@ -35,7 +36,7 @@ class OtoVerificationScreen extends GetView<OtoVerificationController> {
                             SizedBox(height: 7.23.h),
                             Center(
                               child: SvgPicture.asset(
-                                'assets/images/svg/logo.svg',
+                                AppAssets.logo,
                                 width: 20.w,
                                 height: 20.w,
                               ),
