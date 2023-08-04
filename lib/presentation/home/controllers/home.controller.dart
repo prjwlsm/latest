@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
+  RxInt selectedIndex = 0.obs;
   final count = 0.obs;
   @override
   void onInit() {
@@ -19,5 +20,7 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void onItemTapped(index) => selectedIndex.value = index;
+
+
 }

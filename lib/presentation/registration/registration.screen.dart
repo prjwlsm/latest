@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:thatch_mobile_application/domain/core/constants/assets_constants.dart';
 import 'package:thatch_mobile_application/domain/core/constants/text_constants.dart';
 import 'package:thatch_mobile_application/infrastructure/theme/app_colors.dart';
 import 'package:toggle_switch/toggle_switch.dart';
@@ -17,35 +18,25 @@ import 'controllers/registration.controller.dart';
 import 'views/agent_view.dart';
 import 'views/tenant_view.dart';
 
-
-
 class RegistrationScreen extends GetView<RegistrationController> {
-   RegistrationScreen({Key? key}) : super(key: key);
-
-  // ScrollController scrollController = ScrollController();
+  const RegistrationScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    // scrollController.animateTo(
-    //   0,
-    //   duration: const Duration(milliseconds: 700),
-    //   curve: Curves.easeIn,
-    // );
     return Sizer(builder: (context, orientation, deviceType) {
-      Get.log(Get.height.toString());
       return Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
             keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 0.94.h, horizontal: 7.44.w),
+              padding:
+                  EdgeInsets.symmetric(vertical: 0.94.h, horizontal: 7.44.w),
               child: Column(
                 children: [
                   SizedBox(height: 3.525.h),
                   Center(
                     child: SvgPicture.asset(
-                      'assets/images/svg/logo.svg',
+                      AppAssets.logo,
                       width: 20.w,
                       height: 20.w,
                     ),
@@ -59,27 +50,25 @@ class RegistrationScreen extends GetView<RegistrationController> {
                   SizedBox(
                     height: 1.54.h,
                   ),
-
-
                   Container(
                     decoration: ShapeDecoration(
                       shape: RoundedRectangleBorder(
-                        side: const BorderSide(width: 2, color: AppColors.toggleSwitchColorBorder),
+                        side: const BorderSide(
+                            width: 2, color: AppColors.toggleSwitchColorBorder),
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: ToggleSwitch(
-                        // animate: true,
                         minWidth: 40.6.w,
                         minHeight: 5.46.h,
                         cornerRadius: 10.0,
                         inactiveBgColor: Colors.white,
                         inactiveFgColor: AppColors.toneColor,
                         customTextStyles: [
-                          AppTextThemes.headline4
-                              .copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
+                          AppTextThemes.headline4.copyWith(
+                              fontWeight: FontWeight.w700, letterSpacing: 0),
                         ],
                         totalSwitches: 2,
                         labels: TextConstants.registersTypes,
@@ -88,8 +77,6 @@ class RegistrationScreen extends GetView<RegistrationController> {
                       ),
                     ),
                   ),
-
-
                   SizedBox(
                     height: 2.61.h,
                   ),
@@ -102,11 +89,12 @@ class RegistrationScreen extends GetView<RegistrationController> {
                           duration: const Duration(milliseconds: 800),
                           curve: Curves.easeOut,
                           child: Obx(() {
-                              return controller.selectedRegister.value == TextConstants.registersTypes[0] ? TenantView() : AgentView();
-                            }
-                          ),
+                            return controller.selectedRegister.value ==
+                                    TextConstants.registersTypes[0]
+                                ? const TenantView()
+                                : const AgentView();
+                          }),
                         ),
-
                         Padding(
                           padding: const EdgeInsets.only(left: 14),
                           child: Text('Name',
@@ -128,7 +116,7 @@ class RegistrationScreen extends GetView<RegistrationController> {
                         Row(
                           children: [
                             Container(
-                              height: 60,
+                              height: 56,
                               width: 60,
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -147,8 +135,8 @@ class RegistrationScreen extends GetView<RegistrationController> {
                             const Expanded(
                               child: CustomTextFormField(
                                   hintText: 'Mobile',
-                                  topLeft: 0,
-                                  bottomLeft: 0),
+                                  topLeftRadius: 0,
+                                  bottomLeftRadius: 0),
                             ),
                           ],
                         ),
@@ -203,12 +191,14 @@ class RegistrationScreen extends GetView<RegistrationController> {
                               children: [
                                 TextSpan(
                                   text: 'Already have account? ',
-                                  style: AppTextThemes.headline4.copyWith(letterSpacing: 0),
+                                  style: AppTextThemes.headline4
+                                      .copyWith(letterSpacing: 0),
                                 ),
                                 TextSpan(
                                     text: 'Log in',
-                                    style: AppTextThemes.headline4
-                                        .copyWith(fontWeight: FontWeight.w700,letterSpacing: 0),
+                                    style: AppTextThemes.headline4.copyWith(
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0),
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
                                         Get.toNamed(Routes.LOGIN);
@@ -222,7 +212,9 @@ class RegistrationScreen extends GetView<RegistrationController> {
                           height: 5.33.h,
                         ),
                         const TermsofServiceView(),
-                        SizedBox(height:3.09.h,)
+                        SizedBox(
+                          height: 3.09.h,
+                        )
                       ],
                     ),
                   ),

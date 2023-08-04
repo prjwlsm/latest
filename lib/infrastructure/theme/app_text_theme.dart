@@ -33,6 +33,8 @@ class AppTextThemes{
     fontFamily: 'Candara',
   );
 
+
+
   static TextStyle headline2 = TextStyle(
     fontSize: 16.sp, //24 px-
     fontWeight: FontWeight.w500,
@@ -88,6 +90,20 @@ class AppTextThemes{
     fontWeight: FontWeight.w400,
     letterSpacing: 0.80,
     fontFamily: 'Candara',
+  );
+
+  static TextStyle textStyle30 = TextStyle(
+    fontSize: 20.sp, //30 px-
+    fontWeight: FontWeight.w700,
+    letterSpacing: -0.75,
+    fontFamily: 'Candara',
+  );
+
+  static TextStyle textStyle11 = TextStyle(
+    fontSize: 7.33.sp, //11 px-
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Candara',
+    letterSpacing: 0
   );
 
 }
