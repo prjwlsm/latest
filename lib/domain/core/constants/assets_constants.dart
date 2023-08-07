@@ -14,4 +14,12 @@ class AppAssets{
   static const iconRented = '$assets$images${svg}icon_rented.svg';
   static const iconRequests = '$assets$images${svg}icon_requests.svg';
   static const noProperties = '$assets$images${svg}no_properties.svg';
+  static const iconApps = '$assets$images${svg}icon_apps.svg';
+  static const iconBathrooms = '$assets$images${svg}icon_bathrooms.svg';
+  static const iconBed = '$assets$images${svg}icon_bed.svg';
+  static const iconComment = '$assets$images${svg}icon_comment.svg';
+  static const iconFilter = '$assets$images${svg}icon_filter.svg';
+  static const iconLocation = '$assets$images${svg}icon_location.svg';
+  static const iconTrash = '$assets$images${svg}icon_trash.svg';
+  static const iconArrowDown = '$assets$images${svg}icon_arrow_down.svg';
 }

@@ -1,0 +1,22 @@
+<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="9" height="9" fill="#1E1E1E"/>
+<g id="full home page with all the details" clip-path="url(#clip0_0_1)">
+<rect width="390" height="1944" transform="translate(-148 -507)" fill="white"/>
+<g id="Group 42">
+<g id="Group 36">
+<rect id="Rectangle 13" x="-119" y="-57" width="331" height="87" rx="14" fill="#F1F1F1"/>
+<g id="bed-alt 1" clip-path="url(#clip1_0_1)">
+<path id="Vector" d="M7.125 0.75H1.875C0.841125 0.75 0 1.59113 0 2.625V7.875C0 8.08238 0.168 8.25 0.375 8.25C0.582 8.25 0.75 8.08238 0.75 7.875V7.125H8.25V7.875C8.25 8.08238 8.41763 8.25 8.625 8.25C8.83237 8.25 9 8.08238 9 7.875V2.625C9 1.59113 8.15887 0.75 7.125 0.75ZM1.875 1.5H7.125C7.74525 1.5 8.25 2.00475 8.25 2.625V4.875H7.5C7.5 4.04775 6.82725 3.375 6 3.375H5.625C5.17725 3.375 4.77525 3.57225 4.5 3.88388C4.22475 3.57188 3.82275 3.375 3.375 3.375H3C2.17275 3.375 1.5 4.04775 1.5 4.875H0.75V2.625C0.75 2.00475 1.25475 1.5 1.875 1.5ZM4.875 4.875C4.875 4.46137 5.21137 4.125 5.625 4.125H6C6.41363 4.125 6.75 4.46137 6.75 4.875H4.875ZM2.25 4.875C2.25 4.46137 2.58637 4.125 3 4.125H3.375C3.78863 4.125 4.125 4.46137 4.125 4.875H2.25ZM0.75 6.375V5.625H8.25V6.375H0.75Z" fill="#1D8DAD"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="390" height="1944" fill="white" transform="translate(-148 -507)"/>
+</clipPath>
+<clipPath id="clip1_0_1">
+<rect width="9" height="9" fill="white"/>
+</clipPath>
+</defs>
+</svg>
