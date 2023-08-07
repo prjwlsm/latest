@@ -1,11 +1,13 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../infrastructure/theme/app_colors.dart';
 import '../../../infrastructure/theme/app_text_theme.dart';
+import '../constants/assets_constants.dart';
 
 class CustomDropdownView extends GetView {
    const CustomDropdownView({Key? key,this.hint = "", required this.items}) : super(key: key);
@@ -64,6 +66,14 @@ class CustomDropdownView extends GetView {
           ),
           menuItemStyleData: const MenuItemStyleData(
             padding: EdgeInsets.symmetric(horizontal: 16),
+          ),
+          iconStyleData:  IconStyleData(
+            icon: Padding(
+              padding: const EdgeInsets.only(right: 5),
+              child: SvgPicture.asset(
+                AppAssets.iconArrowDown,
+              ),
+            ),
           ),
         ),
         Positioned(

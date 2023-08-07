@@ -32,6 +32,8 @@ class TextConstants {
   static String rented = 'Rented';
   static String thereAreNoPropertiesHere = 'There are no properties here!';
   static String startAddingYourProperties = 'Start adding your properties';
+  static String filter = 'Filter';
+  static String editDetails = 'Edit Details';
 
 
 }

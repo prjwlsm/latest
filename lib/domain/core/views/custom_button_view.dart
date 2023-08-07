@@ -11,20 +11,23 @@ import '../status/button_status.dart';
 
 class CustomButtonView extends GetView {
 
-  const CustomButtonView({Key? key,this.buttonStatus = ButtonStatus.enable,this.onPressed,required this.text, this.fontSize, this.fontWeight = FontWeight.w700,this.icon, this.iconSize,this.backgroundColor,this.letterSpacing = 0}) : super(key: key);
+  const CustomButtonView({Key? key,this.buttonStatus = ButtonStatus.enable,this.onPressed,required this.text, this.fontSize, this.fontWeight = FontWeight.w700,this.icon, this.iconSize,this.backgroundColor,this.letterSpacing = 0,this.iconSpacing, this.elevation, this.textColor}) : super(key: key);
   final ButtonStatus buttonStatus;
   final double? fontSize;
+  final double? iconSpacing;
+  final double? elevation;
   final  String text;
   final  String? icon;
   final double? iconSize;
   final double? letterSpacing;
   final  FontWeight fontWeight;
   final Color? backgroundColor;
+  final Color? textColor;
   final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
+      style: ElevatedButton.styleFrom(backgroundColor: backgroundColor,elevation: elevation),
 
       onPressed: onPressed == null ? null : () {
         onPressed!();
@@ -39,7 +42,7 @@ class CustomButtonView extends GetView {
       )
        : icon == null ? Text(
         text,
-        style: AppTextThemes.headline3.copyWith(fontWeight: fontWeight,fontSize: fontSize,letterSpacing: letterSpacing),
+        style: AppTextThemes.headline3.copyWith(fontWeight: fontWeight,fontSize: fontSize,letterSpacing: letterSpacing, color: textColor),
       ) : Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -49,11 +52,11 @@ class CustomButtonView extends GetView {
             height: iconSize ?? 4.62.w,
           ),
           SizedBox(
-            width: 2.w,
+            width: iconSpacing ?? 2.w,
           ),
            Text(
               text,
-              style: AppTextThemes.headline3.copyWith(fontWeight: fontWeight,fontSize: fontSize,letterSpacing: letterSpacing),
+              style: AppTextThemes.headline3.copyWith(fontWeight: fontWeight,fontSize: fontSize,letterSpacing: letterSpacing, color: textColor),
             ),
         ],
       )
