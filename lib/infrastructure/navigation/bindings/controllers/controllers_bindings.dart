@@ -4,6 +4,7 @@ export 'package:thatch_mobile_application/infrastructure/navigation/bindings/con
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/loi.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/oto_verification.controller.binding.dart'; 
+export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/property_details.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/registration.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/starter.controller.binding.dart'; 
 export 'package:thatch_mobile_application/infrastructure/navigation/bindings/controllers/view_checklist_confirm_loi.controller.binding.dart'; 

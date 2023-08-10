@@ -34,6 +34,13 @@ class TextConstants {
   static String startAddingYourProperties = 'Start adding your properties';
   static String filter = 'Filter';
   static String editDetails = 'Edit Details';
+  static String updateStatus = 'Update Status';
+  static String newContract = 'New Contract';
+  static String currentTenant = 'Current Tenant';
+  static String documents = 'Documents';
+  static String editProperty = 'Edit Property';
+  static String rent = 'RENT';
+  static String gallery = 'Gallery';
 
 
 }

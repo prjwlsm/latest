@@ -22,4 +22,13 @@ class AppAssets{
   static const iconLocation = '$assets$images${svg}icon_location.svg';
   static const iconTrash = '$assets$images${svg}icon_trash.svg';
   static const iconArrowDown = '$assets$images${svg}icon_arrow_down.svg';
+  static const iconBackTransparent = '$assets$images${svg}icon_back_transparent.svg';
+  static const iconAddressBook = '$assets$images${svg}icon_address_book.svg';
+  static const iconDocumentSigned = '$assets$images${svg}icon_document_signed.svg';
+  static const iconHelperRoom = '$assets$images${svg}icon_helper_room.svg';
+  static const iconReceipt = '$assets$images${svg}icon_receipt.svg';
+  static const iconServiceRequest = '$assets$images${svg}icon_service_request.svg';
+  static const iconSwft = '$assets$images${svg}icon_swft.svg';
+  static const iconTickCircle = '$assets$images${svg}icon_tick_circle.svg';
+  static const iconTimePast = '$assets$images${svg}icon_time_past.svg';
 }

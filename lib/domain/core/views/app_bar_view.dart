@@ -35,7 +35,7 @@ PreferredSizeWidget customAppbar({required String title,bool isLeading = false})
         ),
       ),
     ): null,
-  );;
+  );
 }
 // class AppBarView extends GetView {
 //   const AppBarView({Key? key, required this.title,this.isLeading = false}) : super(key: key);

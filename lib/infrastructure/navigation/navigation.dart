@@ -88,5 +88,10 @@ class Nav {
       transition: Transition.rightToLeft,
       transitionDuration: const Duration(seconds: 1),
     ),
+    GetPage(
+      name: Routes.PROPERTY_DETAILS,
+      page: () => const PropertyDetailsScreen(),
+      binding: PropertyDetailsControllerBinding(),
+    ),
   ];
 }

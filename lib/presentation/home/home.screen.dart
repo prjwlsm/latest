@@ -27,7 +27,7 @@ class HomeScreen extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Obx(() {
+        child: Obx(()   {
             return ListView.separated(
               itemBuilder: (BuildContext context, int index) {
                 return index == 0

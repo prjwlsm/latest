@@ -106,4 +106,23 @@ class AppTextThemes{
     letterSpacing: 0
   );
 
+  static TextStyle textStyle28 = TextStyle(
+    fontSize: 18.67.sp	, //30 px-
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0,
+    fontFamily: 'Candara',
+  );
+  static TextStyle textStyle38 = TextStyle(
+    fontSize: 25.33.sp, //38 px-
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Candara',
+  );
+
+  static TextStyle textStyle32 = TextStyle(
+    fontSize: 21.33.sp, //32 px-
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Candara',
+  );
+
+
 }
