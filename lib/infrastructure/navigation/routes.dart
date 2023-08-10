@@ -1,7 +1,7 @@
 class Routes {
   static Future<String> get initialRoute async {
     // TODO: implement method
-    return PROPERTY_DETAILS;
+    return STARTER;
   }
 
   static const COMPLETE_CONTRACT_TENANT = '/complete-contract-tenant';
